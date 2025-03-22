@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tableextractor"
+version = "0.0.8"
+authors = [
+    { name="Zyie", email="hong.zyie1234@gmail.com" },
+]
+description = "A command line application that extracts table information from PowerPoint File"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "python-pptx",
+    "pandas",
+    "click"
+]
+
+[project.urls]
+Homepage = "https://github.com/ZyieHong/tableextractor"
+Issues = "https://github.com/ZyieHong/tableextractor/issues"
+
+[tool.setuptools]
+packages = ["tableextractor"]
+package-dir = {"" = "src"}  
+
+[project.scripts]
+tableextractor = "tableextractor.cli:tableextractor"  
