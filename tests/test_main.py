@@ -5,7 +5,7 @@ from tableextractor import extract_slide_data
 
 # test data configuration
 test_dir = Path(__file__).parent
-test_file = test_dir / "testdata" / "cimb.pptx"
+test_file = test_dir / "test_data" / "cimb.pptx"
 
 expected_data = {
     "Year": ["2019", "2020", "2021", "2022", "2023"],
@@ -41,3 +41,6 @@ def test_company_financials():
         check_dtype=False,
         check_exact=True
     )
+    
+if __name__ == "__main__":
+    test_company_financials()
